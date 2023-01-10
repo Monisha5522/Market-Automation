@@ -1,0 +1,60 @@
+2023-01-06 13:00:27,861 - automation.automation_logger - INFO - user created successfully
+2023-01-06 14:15:01,019 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:15:53,442 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:15:59,428 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:20:06,920 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:21:18,991 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:21:27,281 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:21:33,238 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:25:21,776 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:39:13,401 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:39:37,157 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:39:53,297 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:52:49,478 - automation.automation_logger - INFO - looking for the user None
+2023-01-06 14:53:29,928 - automation.automation_logger - INFO - looking for the user None
+2023-01-07 11:38:47,037 - automation.automation_logger - INFO - looking for the credential None
+2023-01-07 11:39:00,569 - automation.automation_logger - INFO - looking for the credential None
+2023-01-07 11:40:03,369 - automation.automation_logger - INFO - user created successfully
+2023-01-07 11:40:20,808 - automation.automation_logger - INFO - looking for the user None
+2023-01-07 11:40:46,019 - automation.automation_logger - INFO - looking for the user None
+2023-01-07 11:40:58,739 - automation.automation_logger - INFO - looking for the user None
+2023-01-07 11:45:48,714 - automation.automation_logger - INFO - looking for the user 1
+2023-01-07 11:46:34,486 - automation.automation_logger - INFO - looking for the user 2
+2023-01-07 12:32:18,763 - automation.automation_logger - INFO - looking for the user 2
+2023-01-07 12:32:36,137 - automation.automation_logger - INFO - user created successfully
+2023-01-07 12:33:05,781 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:33:44,258 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:35:07,084 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:35:39,346 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:54:18,572 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:54:34,890 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:54:47,308 - automation.automation_logger - INFO - looking for the user 5
+2023-01-07 12:57:58,233 - automation.automation_logger - INFO - user created successfully
+2023-01-07 13:06:26,044 - automation.automation_logger - INFO - user created successfully
+2023-01-07 13:06:36,413 - automation.automation_logger - INFO - *********user details******
+2023-01-07 13:06:45,055 - automation.automation_logger - INFO - looking for the user 7
+2023-01-07 13:06:59,654 - automation.automation_logger - INFO - looking for the user 7
+2023-01-07 13:07:14,073 - automation.automation_logger - INFO - *********user details******
+2023-01-07 13:09:12,519 - automation.automation_logger - INFO - user created successfully
+2023-01-07 13:09:21,207 - automation.automation_logger - INFO - *********user details******
+2023-01-07 13:09:33,408 - automation.automation_logger - INFO - looking for the user 8
+2023-01-07 15:16:08,661 - automation.automation_logger - INFO - user created successfully
+2023-01-07 15:17:00,605 - automation.automation_logger - INFO - looking for the user 9
+2023-01-07 15:17:00,621 - automation.automation_logger - INFO - user deleted successfully 9
+2023-01-09 17:52:13,853 - automation_logger - INFO - *********user details******
+2023-01-09 17:56:27,916 - automation_logger - INFO - role created successfully
+2023-01-09 18:30:07,166 - automation_logger - INFO - looking for the credential 1
+2023-01-10 10:01:17,208 - automation_logger - INFO - role created successfully
+2023-01-10 10:10:48,412 - automation_logger - INFO - *********user details******
+2023-01-10 10:10:57,399 - automation_logger - INFO - user created successfully
+2023-01-10 10:11:28,032 - automation_logger - INFO - user created successfully
+2023-01-10 10:11:39,556 - automation_logger - INFO - *********user details******
+2023-01-10 10:11:54,651 - automation_logger - INFO - looking for the user 1
+2023-01-10 10:12:22,403 - automation_logger - INFO - looking for the user 2
+2023-01-10 10:19:09,060 - automation_logger - INFO - looking for the post 1
+2023-01-10 10:21:58,041 - automation_logger - INFO - looking for the credential None
+2023-01-10 10:24:40,211 - automation_logger - INFO - successfully created platform
+2023-01-10 10:25:51,237 - automation_logger - INFO - looking for the platform 1
+2023-01-10 10:26:18,989 - automation_logger - INFO - successfully created platform
+2023-01-10 10:28:24,107 - automation_logger - INFO - successfully created credential
+2023-01-10 10:29:09,429 - automation_logger - INFO - successfully created credential

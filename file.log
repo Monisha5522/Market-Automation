@@ -1,0 +1,3 @@
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:django.request:Not Found: /automation/credential/3/
+INFO:django.utils.autoreload:C:\Users\Lenovo\market_automation\automation\automation_logger.py changed, reloading.
