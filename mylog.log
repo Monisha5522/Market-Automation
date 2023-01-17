@@ -58,3 +58,69 @@
 2023-01-10 10:26:18,989 - automation_logger - INFO - successfully created platform
 2023-01-10 10:28:24,107 - automation_logger - INFO - successfully created credential
 2023-01-10 10:29:09,429 - automation_logger - INFO - successfully created credential
+2023-01-11 15:31:15,447 - automation_logger - INFO - user created successfully
+2023-01-11 18:16:34,237 - automation_logger - INFO - user created successfully
+2023-01-11 18:17:10,870 - automation_logger - INFO - user details
+2023-01-11 18:23:59,016 - automation_logger - INFO - user details
+2023-01-11 18:24:17,542 - automation_logger - INFO - user created successfully
+2023-01-11 18:29:31,364 - automation_logger - INFO - user created successfully
+2023-01-11 18:30:19,284 - automation_logger - INFO - user details
+2023-01-11 18:30:26,328 - automation_logger - INFO - user details
+2023-01-11 18:30:33,966 - automation_logger - INFO - user created successfully
+2023-01-11 18:34:02,587 - automation_logger - INFO - user created successfully
+2023-01-11 18:36:43,028 - automation_logger - INFO - user details
+2023-01-11 18:39:32,309 - automation_logger - INFO - user created successfully
+2023-01-11 18:40:38,076 - automation_logger - INFO - user details
+2023-01-11 18:41:19,759 - automation_logger - INFO - user details
+2023-01-11 18:41:31,399 - automation_logger - INFO - user details
+2023-01-11 18:41:56,358 - automation_logger - INFO - user created successfully
+2023-01-11 18:42:52,754 - automation_logger - INFO - user created successfully
+2023-01-11 18:43:49,929 - automation_logger - INFO - user created successfully
+2023-01-11 18:46:47,100 - automation_logger - INFO - user created successfully
+2023-01-11 19:08:29,378 - automation_logger - ERROR - name should not contain numeric character
+2023-01-11 19:08:59,313 - automation_logger - INFO - user created successfully
+2023-01-12 09:44:52,213 - automation_logger - INFO - user details
+2023-01-12 10:18:22,001 - automation_logger - INFO - user details
+2023-01-12 10:19:48,656 - automation_logger - INFO - role created successfully
+2023-01-12 10:20:07,935 - automation_logger - INFO - role created successfully
+2023-01-12 10:21:54,419 - automation_logger - INFO - user created successfully
+2023-01-12 10:53:43,688 - automation_logger - INFO - user created successfully
+2023-01-12 10:54:15,267 - automation_logger - INFO - user details
+2023-01-12 11:59:18,815 - automation_logger - INFO - user details
+2023-01-12 11:59:53,781 - automation_logger - INFO - user details
+2023-01-12 12:01:50,082 - automation_logger - INFO - user created successfully
+2023-01-12 12:03:48,709 - automation_logger - INFO - user details
+2023-01-12 12:03:54,882 - automation_logger - INFO - looking for the user 1
+2023-01-12 12:06:44,761 - automation_logger - INFO - user created successfully
+2023-01-12 12:07:47,413 - automation_logger - INFO - user details
+2023-01-12 12:12:47,143 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 12:13:02,154 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 12:13:08,941 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 12:13:19,992 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 12:13:26,374 - automation_logger - INFO - user created successfully
+2023-01-12 15:37:43,605 - automation_logger - INFO - role created successfully
+2023-01-12 15:37:56,708 - automation_logger - INFO - role created successfully
+2023-01-12 15:39:30,026 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 15:39:38,362 - automation_logger - ERROR - name should not contain numeric character
+2023-01-12 15:40:04,727 - automation_logger - ERROR - name should not contain numeric character
+2023-01-12 15:40:23,639 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 15:40:38,432 - automation_logger - INFO - user created successfully
+2023-01-12 15:49:36,612 - automation_logger - INFO - role created successfully
+2023-01-12 15:49:52,556 - automation_logger - INFO - user created successfully
+2023-01-12 16:12:17,166 - automation_logger - INFO - role created successfully
+2023-01-12 16:12:29,640 - automation_logger - INFO - role created successfully
+2023-01-12 16:12:48,406 - automation_logger - INFO - user created successfully
+2023-01-12 18:32:41,362 - automation_logger - INFO - successfully created credential
+2023-01-12 18:39:33,436 - automation_logger - INFO - role created successfully
+2023-01-12 18:39:45,061 - automation_logger - INFO - role created successfully
+2023-01-12 18:40:47,390 - automation_logger - INFO - user created successfully
+2023-01-12 18:59:20,229 - automation_logger - INFO - role created successfully
+2023-01-12 18:59:35,273 - automation_logger - INFO - role created successfully
+2023-01-12 19:01:01,645 - automation_logger - INFO - user created successfully
+2023-01-12 19:04:04,363 - automation_logger - ERROR - number should contain 10 digit
+2023-01-12 19:04:15,869 - automation_logger - INFO - user created successfully
+2023-01-12 19:07:39,116 - automation_logger - INFO - user created successfully
+2023-01-13 09:52:09,578 - automation_logger - INFO - user details
+2023-01-13 09:53:16,716 - automation_logger - INFO - user created successfully
+2023-01-13 12:47:02,970 - automation_logger - INFO - user created successfully
+2023-01-13 12:47:11,340 - automation_logger - INFO - user details

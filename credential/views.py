@@ -2,6 +2,7 @@ import json
 
 from django.http import HttpResponse
 from rest_framework import status
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http.response import JsonResponse
 from automation_exception import DataNotExist
@@ -77,6 +78,7 @@ class CredentialViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyM
             return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['DELETE'])
 def delete_credential(request, pk):
     """
     This method is to remove credential
@@ -96,4 +98,3 @@ def delete_credential(request, pk):
     except DataNotExist:
         logger.error(f'no data found found for the {pk}')
         return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
-

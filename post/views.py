@@ -8,7 +8,7 @@ from rest_framework import mixins
 
 from automation_exception import DataNotExist
 from .models import Post
-from .serializers import PostSerializer
+from .serializers import PostSerializer, AttachmentSerializer
 from automation_logger import logger
 
 
@@ -22,11 +22,15 @@ class PostViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyModelMi
         :param request
         :return: response
         """
+
         serializer = PostSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        attachment_serializer = AttachmentSerializer(data=request.data['attachment'])
+        attachment_serializer.is_valid(raise_exception=True)
+        attachment_serializer.save()
+        return Response(attachment_serializer.data)
 
     def retrieve(self, request, pk=None, **kwargs):
         """

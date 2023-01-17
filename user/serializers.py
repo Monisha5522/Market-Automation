@@ -1,5 +1,5 @@
 import re
-import logger
+from automation_logger import logger
 from rest_framework import serializers
 from user.models import User
 
@@ -15,12 +15,10 @@ class UserSerializer(serializers.ModelSerializer):
         elif not re.match('[A-Za-z\s]', data['name']):
             logger.error("name should not contain numeric character")
             raise serializers.ValidationError('name should not contain numeric character')
-        return data
 
-        if data['name'] == "":
+        if data['phone'] == "":
             return False
-        elif not (URLValidator, data['url']):
-            logger.error('enter a proper url')
-            raise serializers.ValidationError('enter a proper url')
+        elif not re.match('^(0/91)?[7-9][0-9]{9}$', str(data['phone'])):
+            logger.error('number should contain 10 digit')
+            raise serializers.ValidationError('Enter a proper number, it should contain 10 digit')
         return data
-

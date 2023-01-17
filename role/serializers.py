@@ -1,5 +1,5 @@
 import re
-import logger
+from automation_logger import logger
 from rest_framework import serializers
 from role.models import Role
 
