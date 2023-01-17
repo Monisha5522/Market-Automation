@@ -120,7 +120,8 @@ class MailSent(APIView):
             subject=subject,
             html_content=content)
         response = sg.send(message)
+        # sample remove this response
+        print(response)
         print(response.status_code)
         print(response.body)
         print(response.headers)
-
