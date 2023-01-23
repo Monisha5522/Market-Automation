@@ -11,7 +11,7 @@ http://127.0.0.1:8000/automation/post/
 {
     "name" : "monisha",
     "email" : "monisha@gmail.com",
-    "phone" : 866778489,
+    "phone" : 862728489,
     "gender" : "female",
     "role_id" : 1
 }
