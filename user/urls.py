@@ -8,5 +8,6 @@ router.register('automation/user', UserViewSets)
 urlpatterns = [
     path('', include(router.urls)),
     path('automation/user/<int:pk>', DeleteUser.as_view()),
-    path('automation/user/mail', MailSent.as_view())
+    path('automation/user/mail/<int:pk>', MailSent.as_view()),
+    path('automation/user/mail/subject/', MailSent.as_view())
 ]

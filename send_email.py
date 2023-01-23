@@ -11,7 +11,7 @@ def send_email(request):
     subject = Post.subject
     content = Post.caption
     message = Mail(
-        from_email=('monishasivanathan@gmail.com', 'Hello'),
+        from_email=('manishadarling52@gmail.com', 'Hello'),
         to_emails=User.email,
         subject=subject,
         html_content=content)

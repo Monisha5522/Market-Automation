@@ -124,3 +124,41 @@
 2023-01-13 09:53:16,716 - automation_logger - INFO - user created successfully
 2023-01-13 12:47:02,970 - automation_logger - INFO - user created successfully
 2023-01-13 12:47:11,340 - automation_logger - INFO - user details
+2023-01-19 10:25:38,468 - automation_logger - INFO - role created successfully
+2023-01-19 10:25:51,008 - automation_logger - INFO - role created successfully
+2023-01-19 10:26:07,256 - automation_logger - INFO - looking for the role 2
+2023-01-19 10:26:41,550 - automation_logger - INFO - role created successfully
+2023-01-19 10:32:09,027 - automation_logger - ERROR - number should contain 10 digit
+2023-01-19 10:32:18,032 - automation_logger - INFO - user created successfully
+2023-01-19 10:34:07,245 - automation_logger - INFO - user created successfully
+2023-01-19 10:34:27,833 - automation_logger - INFO - user details
+2023-01-19 10:34:38,814 - automation_logger - INFO - looking for the user 1
+2023-01-19 11:54:56,273 - automation_logger - INFO - successfully created platform
+2023-01-19 12:58:45,550 - automation_logger - INFO - looking for the user 2
+2023-01-19 12:58:45,560 - automation_logger - INFO - user deleted successfully 2
+2023-01-19 12:58:57,506 - automation_logger - INFO - user details
+2023-01-19 12:59:31,940 - automation_logger - INFO - user details
+2023-01-19 12:59:43,824 - automation_logger - INFO - looking for the user 2
+2023-01-19 12:59:43,828 - automation_logger - INFO - user deleted successfully 2
+2023-01-19 12:59:53,217 - automation_logger - INFO - user details
+2023-01-19 13:01:15,771 - automation_logger - INFO - looking for the user 2
+2023-01-19 13:01:15,777 - automation_logger - INFO - user deleted successfully 2
+2023-01-19 13:01:25,283 - automation_logger - INFO - user details
+2023-01-19 16:32:42,319 - automation_logger - ERROR - number should contain 10 digit
+2023-01-19 16:32:48,129 - automation_logger - INFO - user created successfully
+2023-01-19 16:33:27,508 - automation_logger - INFO - user created successfully
+2023-01-20 15:06:41,403 - automation_logger - INFO - role created successfully
+2023-01-20 15:07:03,342 - automation_logger - INFO - role created successfully
+2023-01-20 15:07:13,983 - automation_logger - INFO - user created successfully
+2023-01-20 15:07:38,148 - automation_logger - INFO - successfully created platform
+2023-01-20 15:10:50,701 - automation_logger - INFO - successfully created credential
+2023-01-20 16:21:33,755 - automation_logger - INFO - role created successfully
+2023-01-20 16:21:45,792 - automation_logger - INFO - role created successfully
+2023-01-20 16:22:24,189 - automation_logger - INFO - user created successfully
+2023-01-20 16:23:13,400 - automation_logger - INFO - user created successfully
+2023-01-20 16:26:35,141 - automation_logger - INFO - successfully created platform
+2023-01-20 16:26:45,564 - automation_logger - INFO - successfully created credential
+2023-01-20 16:28:42,724 - automation_logger - INFO - user details
+2023-01-20 16:28:52,845 - automation_logger - INFO - looking for the user 1
+2023-01-20 16:29:04,944 - automation_logger - INFO - looking for the user 1
+2023-01-20 16:29:08,512 - automation_logger - INFO - user details

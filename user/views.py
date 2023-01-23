@@ -1,20 +1,19 @@
 import json
+import utils
 
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
 from django.http.response import JsonResponse
 from rest_framework.views import APIView
-
+from rest_framework import viewsets
+from sendgrid import SendGridAPIClient, Mail
 from .serializers import UserSerializer
 from automation_exception import DataNotExist
 from automation_logger import logger
-from rest_framework import viewsets
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
-import utils
 from post.models import Post
 from user.models import User
+from post.serializers import PostSerializer
 
 
 class UserViewSets(viewsets.ModelViewSet):
@@ -93,34 +92,61 @@ class DeleteUser(APIView):
         """
         try:
             user = User.objects.get(pk=pk)
-            if not user.is_active:
+            if user.is_active:
                 logger.info(f"looking for the user {pk}")
                 user.save()
                 logger.info(f"user deleted successfully {pk}")
                 return Response(status=status.HTTP_204_NO_CONTENT)
-            return Response({"Detail ": "data not found"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"Detail ": "Data not found for what your looking"}, status=status.HTTP_400_BAD_REQUEST)
         except DataNotExist:
             logger.error(f'no data found found for the {pk}')
             return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
 
 
+def get_email():
+    return User.objects.values('email')
+
+
+def get_post(pk):
+    post = Post.objects.get(id=pk, status=False)
+    print(post)
+    post_serializer = PostSerializer(post, data=post.__dict__)
+    print('2', post_serializer)
+    post_serializer.is_valid(raise_exception=True)
+    print(post_serializer)
+    return post_serializer.data
+
+
 class MailSent(APIView):
-    print(0)
 
     @staticmethod
-    def post(request):
-        print(1)
+    def get(request, **kwargs):
+        """
+         This method is to get users
+         :param  request
+         """
+        return Response(get_email())
+
+    @staticmethod
+    def post(request, pk, *args, **kwargs):
         constant = utils.send_grid_key
-        sg = SendGridAPIClient(constant)
-        subject = Post.subject
-        content = Post.caption
+        sg = SendGridAPIClient(api_key=constant)
+        print(sg)
+        post = get_post(pk)
+        print(post)
+        subject = post['subject']
+        print(subject)
+        content_file = open("C:/Users/Lenovo/marketautomation/automation/user/mail.txt").read()
+        content = content_file.format(content=post['caption'])
         message = Mail(
-            from_email=(utils.sender_mail, 'Hello'),
-            to_emails='monishasivanathan@gamil.com',
+            from_email=('manishadarling52@gmail.com', 'Hello'),
+            to_emails='monishasivanathan@gmail.com',
+            # to_emails=To(get_email()),
             subject=subject,
-            html_content=content)
+            html_content=content
+        )
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
         print(response.headers)
-
+        return HttpResponse({"Mail sent successfully"}, response.status_code)
