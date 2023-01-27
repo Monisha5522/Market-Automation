@@ -11,10 +11,10 @@ class User(models.Model):
     role_id = models.ForeignKey(Role, on_delete=models.CASCADE, related_name='user', null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    created_by = models.OneToOneField('self', on_delete=models.CASCADE, editable=False,
-                                      blank=True, null=True, related_name='create_user')
-    updated_by = models.OneToOneField('self', on_delete=models.CASCADE, editable=False,
-                                      blank=True, null=True, related_name='update_user')
+    created_by = models.OneToOneField('self', on_delete=models.CASCADE,
+                                      blank=True, null=True, related_name='created_user')
+    updated_by = models.ForeignKey('self', on_delete=models.CASCADE,
+                                   blank=True, null=True, related_name='updated_user')
     is_active = models.BooleanField(editable=False, default=True)
 
     def __str__(self):

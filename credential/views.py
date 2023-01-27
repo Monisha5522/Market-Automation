@@ -2,10 +2,9 @@ import json
 
 from django.http import HttpResponse
 from rest_framework import status
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.http.response import JsonResponse
 from automation_exception import DataNotExist
+from rest_framework.views import APIView
 from .models import Credential
 from .serializers import CredentialSerializer
 from automation_logger import logger
@@ -38,21 +37,22 @@ class CredentialViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyM
          """
         try:
             kwargs.get(pk)
-            credential = Credential.objects.get(pk=pk)
+            credential = Credential.objects.filter(pk=pk, is_active=True)
             logger.info(f"looking for the user {pk}")
-            if credential.is_active:
-                serializer = CredentialSerializer(credential)
-                return Response(serializer.data)
+            if not credential:
+                raise DataNotExist("NO_DATA")
+            serializer = CredentialSerializer(credential, many=True)
+            return Response(serializer.data)
         except DataNotExist:
-            logger.error(f'no data found found for the ')
-            return JsonResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+            logger.error(f'no data found found for the credential')
+            return HttpResponse({f"Data not found for the credential {pk}"}, status=status.HTTP_400_BAD_REQUEST)
 
     def list(self, request, **kwargs):
         """
          This method is to get credentials
          :param  request
          """
-        credential = Credential.objects.all()
+        credential = Credential.objects.filter(is_active=True)
         serializer = CredentialSerializer(credential, many=True)
         return Response(serializer.data)
 
@@ -78,23 +78,24 @@ class CredentialViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyM
             return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['DELETE'])
-def delete_credential(request, pk):
-    """
-    This method is to remove credential
-    :param request:
-    :param pk:
-    :return: boolean
-    """
-    try:
-        credential = Credential.objects.get(pk=pk)
-        logger.info(f"looking for the credential {pk}")
-        if credential.is_active:
-            serializer = CredentialSerializer(credential, data=request.data)
-            serializer.data['is_active'] = True
-            serializer.save()
-            return Response(status=status.HTTP_204_NO_CONTENT)
-        return HttpResponse(json.dumps({"Detail ": "data not found"}, status=status.HTTP_400_BAD_REQUEST))
-    except DataNotExist:
-        logger.error(f'no data found found for the {pk}')
-        return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+class DeleteCredential(APIView):
+    @staticmethod
+    def delete(request, pk):
+        """
+        This method is to remove credential
+        :param request:
+        :param pk:
+        :return: boolean
+        """
+        try:
+            credential = Credential.objects.get(pk=pk)
+            if credential.is_active:
+                logger.info(f"looking for the user {pk}")
+                credential.is_active = False
+                credential.save()
+                logger.info(f"credential deleted successfully {pk}")
+                return Response({"credential deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
+            return Response({"Detail ": "Data not found for what your looking"}, status=status.HTTP_400_BAD_REQUEST)
+        except DataNotExist:
+            logger.error(f'no data found found for the {pk}')
+            return HttpResponse({"Data not found"}, status=status.HTTP_400_BAD_REQUEST)

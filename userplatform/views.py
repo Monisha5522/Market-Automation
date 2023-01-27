@@ -3,8 +3,8 @@ import json
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
-
 from automation_exception import DataNotExist
+from rest_framework.views import APIView
 from .models import Platform
 from .serializers import PlatformSerializer
 from automation_logger import logger
@@ -37,22 +37,22 @@ class PlatformViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyMod
          """
         try:
             kwargs.get(pk)
-            platform = Platform.objects.get(pk=pk)
+            platform = Platform.objects.filter(pk=pk, is_active=True)
             logger.info(f"looking for the platform {pk}")
-            if platform.is_active:
-                serializer = PlatformSerializer(platform)
-                return Response(serializer.data)
-            return HttpResponse(json.dumps({"Detail ": "data not found"}, status=status.HTTP_400_BAD_REQUEST))
+            if not platform:
+                raise DataNotExist("NO_DATA")
+            serializer = PlatformSerializer(platform, many=True)
+            return Response(serializer.data)
         except DataNotExist:
-            logger.error(f'no data found found for the {pk}')
-            return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+            logger.error(f'no data found found for the platform {pk}')
+            return HttpResponse({f'no data found found for the platform {pk}'}, status=status.HTTP_400_BAD_REQUEST)
 
     def list(self, request, **kwargs):
         """
          This method is to get platform
          :param  request
          """
-        platform = Platform.objects.all()
+        platform = Platform.objects.filter(is_active=True)
         serializer = PlatformSerializer(platform, many=True)
         return Response(serializer.data)
 
@@ -76,3 +76,27 @@ class PlatformViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyMod
         except DataNotExist:
             logger.error(f'no data found found for the {pk}')
             return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class DeletePlatform(APIView):
+    @staticmethod
+    def delete(request, pk):
+        """
+        This method is to remove platform
+        :param request:
+        :param pk:
+        :return: boolean
+        """
+        try:
+            platform = Platform.objects.get(pk=pk)
+            if platform.is_active:
+                logger.info(f"looking for the user {pk}")
+                platform.is_active = False
+                platform.save()
+                logger.info(f"platform deleted successfully {pk}")
+                return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response({"Detail ": "Data not found for what your looking"}, status=status.HTTP_400_BAD_REQUEST)
+        except DataNotExist:
+            logger.error(f'no data found found for the {pk}')
+            return HttpResponse({"Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+

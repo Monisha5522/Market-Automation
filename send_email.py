@@ -1,6 +1,6 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-import utils
+import constants
 from post.models import Post
 from user.models import User
 

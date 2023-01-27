@@ -1,10 +1,8 @@
-import json
-
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
-
 from automation_exception import DataNotExist
+from rest_framework.views import APIView
 from .models import Role
 from .serializers import RoleSerializer
 from automation_logger import logger
@@ -37,21 +35,44 @@ class RoleViewSet(ModelViewSet, mixins.RetrieveModelMixin, mixins.DestroyModelMi
          """
         try:
             kwargs.get(pk)
-            role = Role.objects.get(pk=pk)
+            role = Role.objects.filter(pk=pk, is_active=True)
             logger.info(f"looking for the role {pk}")
-            if role.is_active:
-                serializer = RoleSerializer(role)
-                return Response(serializer.data)
-            return HttpResponse(json.dumps({"Detail ": "data not found"}, status=status.HTTP_400_BAD_REQUEST))
+            if not role:
+                raise DataNotExist("NO_DATA")
+            serializer = RoleSerializer(role, many=True)
+            return Response(serializer.data)
         except DataNotExist:
             logger.error(f'no data found found for the {pk}')
-            return HttpResponse({"Detail : ": "Data not found"}, status=status.HTTP_400_BAD_REQUEST)
+            return HttpResponse({f'no data found found for the role {pk}'}, status=status.HTTP_400_BAD_REQUEST)
 
     def list(self, request, **kwargs):
         """
          This method is to get role
          :param  request
          """
-        role = Role.objects.all()
+        role = Role.objects.filter(is_active=True)
         serializer = RoleSerializer(role, many=True)
         return Response(serializer.data)
+
+
+class DeleteRole(APIView):
+    @staticmethod
+    def delete(request, pk):
+        """
+        This method is to remove user
+        :param request:
+        :param pk:
+        :return: boolean
+        """
+        try:
+            role = Role.objects.get(pk=pk)
+            if role.is_active:
+                logger.info(f"looking for the user {pk}")
+                role.is_active = False
+                role.save()
+                logger.info(f"role deleted successfully {pk}")
+                return Response({"role deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
+            return Response({"Detail ": "Data not found for what your looking"}, status=status.HTTP_400_BAD_REQUEST)
+        except DataNotExist:
+            logger.error(f'no data found found for the {pk}')
+            return HttpResponse({"Data not found"}, status=status.HTTP_400_BAD_REQUEST)

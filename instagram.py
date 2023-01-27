@@ -1,7 +1,5 @@
 from instabot import Bot
-from credential.models import Credential
-
 
 bot = Bot()
-bot.login(username=Credential.name, password=Credential.password)
-bot.upload_photo(r"C:\photos\girl.jfif", caption="rose image")
+bot.login(username='__freaky_senorita__', password='PrabhuDeva55')
+bot.upload_photo(r"C:/photo/car.jpg", caption="images")
