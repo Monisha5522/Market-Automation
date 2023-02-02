@@ -120,6 +120,9 @@ class DeleteUser(APIView):
 
 
 def get_email():
+    """
+    get a list of email of user
+    """
     return User.objects.values('email')
 
 
@@ -135,6 +138,10 @@ def get_post(pk):
 
 
 def get_mail_by_id(user_id):
+    """
+    This method is to get a particular email
+    :param user_id:
+    """
     user = User.objects.get(id=user_id, is_active=True)
     user_serializer = UserSerializer(user, data=user.__dict__)
     user_serializer.is_valid(raise_exception=True)
@@ -157,6 +164,7 @@ class MailSent(APIView):
         This method is to send a mail to external user
         :param request:
         :param pk:
+        :param user_id:
         """
         constant = constants.send_grid_key
         sg = SendGridAPIClient(api_key=constant)
@@ -175,6 +183,7 @@ class MailSent(APIView):
         print(response.status_code)
         print(response.body)
         print(response.headers)
+        logger.info(f'Successfully sent a mail')
         return HttpResponse({"Mail sent successfully"}, response.status_code)
 
 
@@ -197,21 +206,33 @@ def get_attachment(pk):
     attachment = Attachment.objects.get(id=pk)
     attachment_serializer = AttachmentSerializer(attachment, data=attachment.__dict__)
     attachment_serializer.is_valid(raise_exception=True)
-    return attachment_serializer
+    return attachment_serializer.data
 
 
 class InstagramPost(APIView):
     @staticmethod
-    def post(request, pk, *args, **kwargs):
+    def post(request, user_id, pk, attachment_id,  *args, **kwargs):
         """
         This method is to send a post in
         :param request:
+        :param user_id:
         :param pk:
+        :param attachment_id:
         """
-        user_name = get_user_name(pk)
-        caption = get_post(pk)
-        url = get_attachment(pk)
-        bot = Bot()
-        bot.login(username=user_name['name'], password=user_name['password'], is_threaded=True)
-        bot.upload_photo(url['url'], caption=caption['caption'])
-        return HttpResponse("posted")
+        try:
+            logger.info(f'looking for user_name and password')
+            user_name = get_user_name(user_id)
+            caption = get_post(pk)
+            url = get_attachment(attachment_id)
+            bot = Bot()
+            bot.login(username=user_name['name'], password=user_name['password'], is_threaded=True)
+            logger.info(f'successfully logged in as {user_name["name"]}')
+            logger.info(f"looking for caption and path of the picture")
+            bot.upload_photo(url[r'url'], caption=caption['caption'])
+            logger.info(f'Successfully uploaded a picture on instagram')
+            return HttpResponse("Posted successfully")
+        except KeyError:
+            logger.error(f"Clear the cookie of the insta page")
+            return Response({"Kindly, checkout uuid and cookie of the instagram page you're looking for"},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+

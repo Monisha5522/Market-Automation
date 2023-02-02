@@ -10,5 +10,5 @@ urlpatterns = [
     path('automation/user/restore/<int:pk>', DeleteUser.as_view()),
     path('automation/user/mail/<int:pk>/<int:user_id>', MailSent.as_view()),
     path('automation/user/mail/subject/', MailSent.as_view()),
-    path('automation/user/instagram/picture/<int:pk>', InstagramPost.as_view())
+    path('automation/user/instagram/picture/<int:user_id>/<int:pk>/<int:attachment_id>', InstagramPost.as_view())
 ]

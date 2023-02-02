@@ -1,0 +1,39 @@
+2023-01-30 12:09:34,396 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-30 12:09:34,396 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Lenovo\marketautomation\venv\Lib\site-packages\instabot\bot\bot.py
+2023-01-30 12:09:34,397 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2023-01-30 12:09:48,062 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-30 12:09:48,063 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Lenovo\marketautomation\venv\Lib\site-packages\instabot\bot\bot.py
+2023-01-30 12:09:48,066 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-01-30 12:09:48,449 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-01-30 12:09:48,743 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-01-30 12:09:49,050 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-01-30 12:09:49,317 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-01-30 12:09:51,550 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-01-30 12:09:51,550 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXHin-WcDpoaRWJDQiSwDfrDLJF6SKNmeiCYkqJKcDGuIIwKD5StBM3oQNJVGU2VeR_-hrg/AfyOuLi8_UXgQ2zFDK5pbFYdfMjEQJsiG-_vzFO6L_Xhc0gi6Vy9kHZnOLyvnxh6Q9pGt69K_6uX9w/","api_path":"/challenge/AXHin-WcDpoaRWJDQiSwDfrDLJF6SKNmeiCYkqJKcDGuIIwKD5StBM3oQNJVGU2VeR_-hrg/AfyOuLi8_UXgQ2zFDK5pbFYdfMjEQJsiG-_vzFO6L_Xhc0gi6Vy9kHZnOLyvnxh6Q9pGt69K_6uX9w/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-01-30 12:09:51,550 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-01-30 12:09:51,554 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-01-30 12:09:51,555 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required
+2023-01-30 12:12:53,623 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-30 12:12:53,661 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Lenovo\marketautomation\venv\Lib\site-packages\instabot\bot\bot.py
+2023-01-30 12:12:53,662 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-01-30 12:12:54,073 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-01-30 12:12:54,389 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-01-30 12:12:54,690 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-01-30 12:12:55,019 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-01-30 12:12:56,527 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-01-30 12:12:56,527 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXEOwP7doy_TNvJ9zv2WGwv5DJGpub9RoZX_bhmCTuVqxaiIwrlIKJRGIYSiuebMA_RTqsM/AfxaoHaEMhtq6RzKe07TDxlGqndN1Wfi00_ss0Wu-5lD537lwGpzIwBXkUZBqBkdel5_j-bj2t2Xrg/","api_path":"/challenge/AXEOwP7doy_TNvJ9zv2WGwv5DJGpub9RoZX_bhmCTuVqxaiIwrlIKJRGIYSiuebMA_RTqsM/AfxaoHaEMhtq6RzKe07TDxlGqndN1Wfi00_ss0Wu-5lD537lwGpzIwBXkUZBqBkdel5_j-bj2t2Xrg/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-01-30 12:12:56,527 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-01-30 12:12:56,529 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-01-30 12:12:56,530 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required
+2023-01-30 12:19:21,947 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-30 12:19:21,949 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Lenovo\marketautomation\venv\Lib\site-packages\instabot\bot\bot.py
+2023-01-30 12:19:21,950 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-01-30 12:19:22,250 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-01-30 12:19:22,580 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-01-30 12:19:22,858 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-01-30 12:19:23,128 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-01-30 12:19:25,411 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-01-30 12:19:25,412 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXGXU9xkv-Vk7Uz9z4dI78T_QWsVw5rp8Pfprcvar32ttnpOiFP-aYmR1Ob95GBf0C8IfUo/AfykmnDbqZtAQxfSOrYAcFFaOZzyyc5peVqyBWUyo4Qpl_dIdtcNpbNRWHP7XmcI3z5Ykd-tnq9n_A/","api_path":"/challenge/AXGXU9xkv-Vk7Uz9z4dI78T_QWsVw5rp8Pfprcvar32ttnpOiFP-aYmR1Ob95GBf0C8IfUo/AfykmnDbqZtAQxfSOrYAcFFaOZzyyc5peVqyBWUyo4Qpl_dIdtcNpbNRWHP7XmcI3z5Ykd-tnq9n_A/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-01-30 12:19:25,412 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-01-30 12:19:25,414 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-01-30 12:19:25,448 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required

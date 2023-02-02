@@ -299,3 +299,14 @@
 2023-01-25 15:49:14,966 - automation_logger - INFO - successfully created platform
 2023-01-25 15:49:51,423 - automation_logger - INFO - successfully created credential
 2023-01-27 12:48:36,948 - automation_logger - INFO - user details
+2023-01-30 14:57:40,199 - automation_logger - INFO - role created successfully
+2023-01-30 14:57:46,028 - automation_logger - INFO - user created successfully
+2023-01-30 14:58:55,892 - automation_logger - INFO - successfully created platform
+2023-01-30 14:59:14,328 - automation_logger - INFO - successfully created credential
+2023-01-30 15:13:13,448 - automation_logger - INFO - user created successfully
+2023-01-30 15:19:19,246 - automation_logger - INFO - user created successfully
+2023-01-30 18:39:55,735 - automation_logger - INFO - looking for user_name and password
+2023-01-30 18:39:56,053 - automation_logger - ERROR - Clear the cookie of the insta page
+2023-02-02 17:12:45,594 - automation_logger - INFO - user details
+2023-02-02 17:12:49,939 - automation_logger - INFO - user details
+2023-02-02 17:13:42,857 - automation_logger - INFO - user details

@@ -1,0 +1,24 @@
+2023-01-30 13:16:04,883 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-30 13:16:04,886 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Lenovo\marketautomation\venv\Lib\site-packages\instabot\bot\bot.py
+2023-01-30 13:16:04,887 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-01-30 13:16:05,242 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [429]>
+2023-01-30 13:16:05,242 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"Please wait a few minutes before you try again.","status":"fail"}'
+2023-01-30 13:16:05,245 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2023-01-30 13:16:05,246 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 5 minutes.
+2023-01-30 13:21:05,605 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [429]>
+2023-01-30 13:21:05,606 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"Please wait a few minutes before you try again.","status":"fail"}'
+2023-01-30 13:21:05,606 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2023-01-30 13:21:05,606 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 10 minutes.
+2023-01-30 13:31:05,981 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [400]>
+2023-01-30 13:31:05,982 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"","status":"fail"}'
+2023-01-30 13:31:05,982 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-01-30 13:31:05,983 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: 
+2023-01-30 13:31:05,986 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: {}
+2023-01-30 13:31:06,307 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-01-30 13:31:06,592 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-01-30 13:31:06,894 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-01-30 13:31:11,468 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-01-30 13:31:11,470 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXFntPar0gRLUnhlMt5IGhS3Rc5pmti_eCQST8GpzVsrrfKzVyhyIJ4i1yfSocRAPrqWWl4/AfzB39ulBhTpF_yo-ds0gYRNYxEFoU8qDJNUFAZOa3L86tgnD7dFoHMzvPeUl_GVznBbqkiZtJreqg/","api_path":"/challenge/AXFntPar0gRLUnhlMt5IGhS3Rc5pmti_eCQST8GpzVsrrfKzVyhyIJ4i1yfSocRAPrqWWl4/AfzB39ulBhTpF_yo-ds0gYRNYxEFoU8qDJNUFAZOa3L86tgnD7dFoHMzvPeUl_GVznBbqkiZtJreqg/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-01-30 13:31:11,470 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-01-30 13:31:11,490 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-01-30 13:31:11,511 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required
