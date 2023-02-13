@@ -48,7 +48,7 @@ http://127.0.0.1:8000/automation/post/
     "id": 3,
     "name": "premasivanathan",
     "email": "prema@gmail.com",
-    "phone": 8508198365,
+    "phone": 85081983**,
     "gender": "female",
     "created_on": "2023-01-06T07:30:27.843453Z",
     "updated_on": "2023-01-06T07:30:27.843453Z",
